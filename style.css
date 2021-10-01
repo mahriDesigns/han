@@ -108,6 +108,11 @@ img {
   color: #bbb;
 }
 
+#livePast {
+  display: grid;
+  gap: 20px;
+}
+
 /* FOOTER */
 footer {
   margin: auto;
@@ -147,8 +152,6 @@ footer img {
 /* displaying live (past) as two columns for bigger devices */
 @media (min-width: 1000px) {
   #livePast {
-    display: grid;
-    grid-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
   }
 
