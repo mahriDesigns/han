@@ -105,7 +105,7 @@ html::before {
   gap: 2rem;
 }
 
-img {
+#section-b img {
   height: 20vw;
   width: 25vw;
   position: center;
@@ -185,7 +185,7 @@ footer img {
     flex-direction: column;
   }
 
-  img {
+  #section-b img {
     height: 60vw;
     width: 75vw;
   }
@@ -240,17 +240,19 @@ footer img {
 }
 
 /* taking care of landscape orientation*/
-@media(orientation: landscape) {
+@media(orientation: landscape) and (max-width:900px) {
   #logo {
     height: calc(40vw/1.5);
     width: calc(84vw/1.5);
+    position: absolute;
+    bottom: 0;
   }
 
   html::before {
     background-position: 20% 35%;
   }
 
-  img {
+  #section-b img {
     max-height: 60vh;
     max-width: 75vh;
   }
