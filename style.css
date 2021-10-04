@@ -241,6 +241,8 @@ footer img {
 
 /* taking care of landscape orientation*/
 @media(orientation: landscape) and (max-width:900px) {
+
+  /* resizing logo */
   #logo {
     height: calc(40vw/1.5);
     width: calc(84vw/1.5);
@@ -248,10 +250,12 @@ footer img {
     bottom: 0;
   }
 
+  /* positioning BG so that heads aren't cut off */
   html::before {
     background-position: 20% 35%;
   }
 
+  /* taking care of (mobile) images bigger than screen */
   #section-b img {
     max-height: 60vh;
     max-width: 75vh;
