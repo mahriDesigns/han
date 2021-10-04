@@ -188,6 +188,10 @@ footer img {
     height: 60vw;
     width: 75vw;
   }
+
+  html::before {
+    background-position: center;
+  }
 }
 
 /* smaller footer for smaller devices (preventing 3-liners) */
@@ -246,10 +250,15 @@ footer img {
   }
 }*/
 
-/* taking care of logo scales a little */
-@media(orientation: landscape) and (max-width: 820px) {
+/* taking care of landscape orientation*/
+@media(orientation: landscape) {
   #logo {
-    height: calc(40vh*1.5);
-    width: calc(84vh*1.5);
+    height: calc(40vw/1.5);
+    width: calc(84vw/1.5);
   }
+
+  html::before {
+    background-position: 20% 35%;
+  }
+
 }
