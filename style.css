@@ -171,15 +171,14 @@ footer img {
     height: 60vw;
     width: 75vw;
   }
-}
-
-@media(max-width:900px) {
 
   /* setting showcase to scroll (instead of fixed) -> FIXED IS NOT WORKING WITH IPHONES! */
   #showcase {
     background-attachment: scroll;
   }
 }
+
+@media(max-width:900px) {}
 
 /* smaller footer for smaller devices (preventing 3-liners) */
 @media (max-width: 680px) {
