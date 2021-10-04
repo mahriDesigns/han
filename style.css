@@ -237,19 +237,7 @@ footer img {
   footer li:nth-child(2) {
     padding-bottom: 10px;
   }
-
-  /* setting showcase to scroll (instead of fixed) -> FIXED IS NOT WORKING WITH IPHONES!
-  #showcase {
-    background-attachment: scroll;
-  }*/
 }
-
-/* taking care of showcase scales a little
-@media(max-aspect-ratio:987/718) {
-  #showcase {
-    background-position: center;
-  }
-}*/
 
 /* taking care of landscape orientation*/
 @media(orientation: landscape) {
@@ -262,4 +250,8 @@ footer img {
     background-position: 20% 35%;
   }
 
+  img {
+    max-height: 60vh;
+    max-width: 75vh;
+  }
 }
