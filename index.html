@@ -202,17 +202,17 @@
 
       /* MOVE LOGO WITHOUT ANIMATION, JUST CLIPPING */
       function moveLogo() {
-        //let matchMedia = window.matchMedia("(min-width:900px) or (min-height:900px)");
-        //if (matchMedia.matches) {
+        let matchMedia = window.matchMedia("(min-width:900px)");
         const logo = document.getElementById("logo");
         const showcase = document.getElementById("showcase")
         if (!changed) {
+          if (matchMedia.matches) {
+            showcase.style.height = `80vh`;
+          }
           logo.style.position = "absolute";
-          showcase.style.height = `80vh`;
-          logo.style.bottom = `0`;
+          logo.style.bottom = matchMedia.matches ? `20vh` : `0`;
           changed = true;
         }
-        //}
       }
       /* IF YOU WANT TO GET RID OF THE FIXED BACKGROUND ALTOGETHER, GO TO CSS, SHOWCASE, BACKGROUND-ATTACHMENT AND SET IT TO SCROLL,
       REMOVE EVENTLISTENER ON BODY TO GET RID OF ERROR MESSAGE IN CONSOLE AND COMMENT OUT ALL THE SCRIPTS */
