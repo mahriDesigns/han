@@ -91,6 +91,7 @@ html::before {
   right: 0;
   position: fixed;
   z-index: -10;
+  padding: env(safe-area-inset);
 }
 
 #logo {
