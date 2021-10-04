@@ -173,15 +173,18 @@ footer img {
   }
 }
 
-/* smaller footer for smaller devices (preventing 3-liners) */
-@media (max-width: 680px) {
-  footer li {
-    font-size: 16px;
-  }
+@media(max-width:900px) {
 
   /* setting showcase to scroll (instead of fixed) -> FIXED IS NOT WORKING WITH IPHONES! */
   #showcase {
     background-attachment: scroll;
+  }
+}
+
+/* smaller footer for smaller devices (preventing 3-liners) */
+@media (max-width: 680px) {
+  footer li {
+    font-size: 16px;
   }
 }
 
