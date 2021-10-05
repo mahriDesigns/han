@@ -91,7 +91,6 @@ html::before {
   right: 0;
   position: fixed;
   z-index: -10;
-  padding: env(safe-area-inset);
 }
 
 #logo {
@@ -259,5 +258,10 @@ footer img {
   #section-b img {
     max-height: 60vh;
     max-width: 75vh;
+  }
+
+  /* no white stripes right/left in landscape mode of mobile */
+  html::before {
+    padding: env(safe-area-inset);
   }
 }
