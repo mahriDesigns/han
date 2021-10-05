@@ -1,17 +1,17 @@
-<!--  viewport-fit=cover -->
 <!DOCTYPE html>
 <html lang="en">
 
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="viewport"
+      content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0; viewport-fit=cover" />
     <link rel="shortcut icon" href="https://f4.bcbits.com/img/a2667012501_3.jpg">
     <link rel="apple-touch-icon" href="https://f4.bcbits.com/img/a2667012501_3.jpg">
     <link rel="stylesheet" href="style.css" />
     <title>Hån</title>
   </head>
 
-  <body onscroll="moveLogo()">
+  <body>
     <header id="showcase">
       <img id="logo" src="https://www.xn--hn-yia.ch/Daten/Bilder/Logo.png" alt="">
     </header>
@@ -201,7 +201,7 @@
       } */
 
       /* MOVE LOGO WITHOUT ANIMATION, JUST CLIPPING */
-      function moveLogo() {
+      /* function moveLogo() {
         let matchMedia = window.matchMedia("(min-width:900px)");
         const logo = document.getElementById("logo");
         const showcase = document.getElementById("showcase")
@@ -213,7 +213,7 @@
           logo.style.bottom = matchMedia.matches ? `20vh` : `0`;
           changed = true;
         }
-      }
+      } */
       /* IF YOU WANT TO GET RID OF THE FIXED BACKGROUND ALTOGETHER, GO TO CSS, SHOWCASE, BACKGROUND-ATTACHMENT AND SET IT TO SCROLL,
       REMOVE EVENTLISTENER ON BODY TO GET RID OF ERROR MESSAGE IN CONSOLE AND COMMENT OUT ALL THE SCRIPTS */
     </script>
