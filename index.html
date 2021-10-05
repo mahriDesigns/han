@@ -181,7 +181,8 @@
       let changed = false;
 
       function moveLogo() {
-        let matchMedia = window.matchMedia("(min-width:480px)");
+        /* ensure only non-mobiles */
+        let matchMedia = window.matchMedia("(min-width:900px)");
         const logo = document.getElementById("logo");
         const showcase = document.getElementById("showcase")
         if (!changed) {
