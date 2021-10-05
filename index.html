@@ -179,43 +179,20 @@
     </footer>
     <script>
       let changed = false;
-      /* MOVE LOGO WITH SCROLL ANIMATION */
-      /* function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-      }
-      async function moveLogo() {
-        let matchMedia = window.matchMedia("(max-width:480px)");
-        if (!matchMedia.matches) {
-          const logo = document.getElementById("logo");
-          const showcase = document.getElementById("showcase")
-          if (!changed) {
-            logo.style.position = "absolute";
-            for (let index = 100; index >= 80; index--) {
-              changed = true;
-              showcase.style.height = `${index}vh`
-              logo.style.bottom = `${index == 80? 20: 0+((100-index))}vh`;
-              await sleep(100)
-            }
-          }
-        }
-      } */
 
-      /* MOVE LOGO WITHOUT ANIMATION, JUST CLIPPING */
       function moveLogo() {
-        let matchMedia = window.matchMedia("(min-width:900px)");
+        let matchMedia = window.matchMedia("(min-width:480px)");
         const logo = document.getElementById("logo");
         const showcase = document.getElementById("showcase")
         if (!changed) {
           if (matchMedia.matches) {
             showcase.style.height = `80vh`;
+            logo.style.position = "absolute";
+            logo.style.bottom = `20vh`;
+            changed = true;
           }
-          logo.style.position = "absolute";
-          logo.style.bottom = matchMedia.matches ? `20vh` : `0vh`;
-          changed = true;
         }
       }
-      /* IF YOU WANT TO GET RID OF THE FIXED BACKGROUND ALTOGETHER, GO TO CSS, SHOWCASE, BACKGROUND-ATTACHMENT AND SET IT TO SCROLL,
-      REMOVE EVENTLISTENER ON BODY TO GET RID OF ERROR MESSAGE IN CONSOLE AND COMMENT OUT ALL THE SCRIPTS */
     </script>
   </body>
 
